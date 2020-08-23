@@ -1,5 +1,6 @@
 <script>
     import NameChanger from './NameChanger.svelte';
+    import ReactivityStatement from './ReactivityStatement.svelte'
 </script>
 
 <style>
@@ -18,5 +19,7 @@
 
 <main>
     <NameChanger appTitle="User Form" />
-
+    <ReactivityStatement />
 </main>
+
+<!-- you are here !! https://svelte.dev/tutorial/keyed-each-blocks -->

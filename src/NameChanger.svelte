@@ -35,7 +35,7 @@
     <input id="userPhone" type="text"  placeholder="What is your phone number?" bind:value={userPhone}/>
     <input type=submit value="Submit">
 </form>
-<!-- todo move output to it's own component -->
+<!-- todo move output to it's own component useing store -->
 <h2>Form Output</h2>
 <p>Name: {userName}</p>
 <p>Email: {userEmail}</p>
