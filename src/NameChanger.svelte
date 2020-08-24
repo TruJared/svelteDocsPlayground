@@ -1,30 +1,17 @@
 <script>
-
-    export let appTitle = 'Form';
     let userName = '';
     let userEmail = '';
     let userPhone = '';
     let updatedUserPhone = '';
 
-    const htmlString = '&lt;div&gt';
 </script>
 
 <style>
-    h1 {
-        color: #ff3e00;
-        text-transform: uppercase;
-        font-size: 3em;
-        font-weight: 100;
-    }
+
 </style>
 
-<h1>Welcome To: {appTitle}</h1>
-<p>
-    Random HTML string just because ➡
-    {@html htmlString}
-</p>
 
-<h2>Form Input</h2>
+<h3>Form Input</h3>
 <p>Name and Phone will update reactively, email demonstrates submitted</p>
 <form on:submit|preventDefault={()=>updatedUserPhone=userPhone}>
     <label for="userName">Name</label>
@@ -36,7 +23,7 @@
     <input type=submit value="Submit">
 </form>
 <!-- todo move output to it's own component useing store -->
-<h2>Form Output</h2>
+<h3>Form Output</h3>
 <p>Name: {userName}</p>
 <p>Email: {userEmail}</p>
 <p>Phone Number: {updatedUserPhone}</p>
