@@ -53,8 +53,8 @@
         {@html htmlString}
     </p>
     <h2>Form Logic (this will make use of stores eventually)</h2>
-    <NameChanger appTitle="User Form" />
-    <h2>Reactivity Statemet</h2>
+    <NameChanger />
+    <h2>Reactivity Statement</h2>
     <ReactivityStatement />
     <h2>This is a an example of using destructing in a component</h2>
     <Destructuring {...warhammer} />
@@ -62,7 +62,7 @@
     {#each urls as url}
         <Each {...url} />
     {/each}
-    <h2>Yodify (uses built in Awiat block)</h2>
+    <h2>Yodify (uses built in Await block)</h2>
     <Yodify />
 </main>
 

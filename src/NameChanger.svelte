@@ -6,11 +6,6 @@
 
 </script>
 
-<style>
-
-</style>
-
-
 <h3>Form Input</h3>
 <p>Name and Phone will update reactively, email demonstrates submitted</p>
 <form on:submit|preventDefault={()=>updatedUserPhone=userPhone}>
