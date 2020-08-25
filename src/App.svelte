@@ -4,6 +4,7 @@
     import Destructuring from './Destructuring.svelte';
     import Each from './Each.svelte';
     import Yodify from './Yodify.svelte';
+    import EventDispatcher from './EventDispatcher.svelte';
 
     const htmlString = '&lt;div&gt';
 
@@ -23,6 +24,10 @@
             pageUrl: 'https://svelte.dev/tutorial/keyed-each-blocks',
         },
     ];
+
+    function handleMessage(event) {
+        alert(event.detail.text);
+    }
 </script>
 
 <style>
@@ -64,6 +69,8 @@
     {/each}
     <h2>Yodify (uses built in Await block)</h2>
     <Yodify />
+    <h2>Event Dispatcher (handy, but not many use cases)</h2>
+    <EventDispatcher on:message={handleMessage} />
 </main>
 
 <!-- you are here !! https://svelte.dev/tutorial/keyed-each-blocks -->

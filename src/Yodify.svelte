@@ -1,3 +1,5 @@
+<!-- must be built pretty specifically to work correctly https://svelte.dev/tutorial/await-blocks -->
+
 <script>
     const yodaApi = 'https://yoda-api.appspot.com/api/v1/yodish?text=';
     let yodified = yodifyIt(null);
@@ -27,7 +29,6 @@
     }
 </style>
 
-<!-- todo make component work better https://svelte.dev/tutorial/await-blocks -->
 <div>
     <input id="yodifyInput" type="text" placeholder="Enter text to yodify" />
     <!-- svelte-ignore missing-declaration -->
