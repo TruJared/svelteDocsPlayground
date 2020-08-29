@@ -5,6 +5,8 @@
     import Each from './Each.svelte';
     import Yodify from './Yodify.svelte';
     import EventDispatcher from './EventDispatcher.svelte';
+    import Bindings from './Bindings.svelte';
+    import LifeCycleMethods from './LifeCycleMethods.svelte';
 
     const htmlString = '&lt;div&gt';
 
@@ -71,6 +73,8 @@
     <Yodify />
     <h2>Event Dispatcher (handy, but not many use cases)</h2>
     <EventDispatcher on:message={handleMessage} />
+    <h2>Are checkboxes the greatest HTML element of all time??</h2>
+    <Bindings />
+    <h2>Life Cycle Methods</h2>
+    <LifeCycleMethods />
 </main>
-
-<!-- you are here !! https://svelte.dev/tutorial/keyed-each-blocks -->

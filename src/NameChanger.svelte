@@ -1,4 +1,3 @@
-<!-- you are here https://svelte.dev/tutorial/checkbox-inputs -->
 <script>
     let userName = '';
     let userEmail = '';
