@@ -38,15 +38,6 @@
 </script>
 
 <style>
-    security-questions {
-        display: block;
-        width: 500px;
-        max-width: 100%;
-    }
-
-    	dimentions__input { display: block; }
-	dimentions__div { display: inline-block; }
-	dimentsion__span { word-break: break-all; }
 </style>
 
 <label>
