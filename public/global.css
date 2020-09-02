@@ -44,10 +44,13 @@ input:disabled {
 	color: #ccc;
 }
 
-button {
+button, input[type="submit"] {
 	color: #333;
-	background-color: #f4f4f4;
+	background-color: #e2e2e2;
 	outline: none;
+	min-width: 125px;
+	border-radius: 5px;
+
 }
 
 button:disabled {
