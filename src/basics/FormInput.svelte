@@ -1,5 +1,5 @@
 <script>
-import {user} from './stores.js';
+import {user} from '../stores.js';
 let userPhone;
 
     // * not an ideal way to handle this, but illustrates stores being used in the script tag * //

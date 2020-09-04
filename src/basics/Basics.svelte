@@ -1,5 +1,4 @@
 <script>
-    // import NameChanger from './FormInput.svelte';
     import FormInput from './FormInput.svelte';
     import Destructuring from './Destructuring.svelte';
     import Each from './Each.svelte';
@@ -8,7 +7,7 @@
     import Bindings from './Bindings.svelte';
     import LifeCycleMethods from './LifeCycleMethods.svelte';
     import FormOutput from './FormOutput.svelte';
-    import { time } from './stores.js';
+    import { time } from '../stores.js';
 
     const htmlString = '&lt;div&gt';
 

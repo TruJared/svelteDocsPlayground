@@ -1,8 +1,8 @@
 <script>
-    import Basics from './Basics.svelte';
-    import Transitions from './Transitions.svelte';
+    import Basics from './basics/Basics.svelte';
+    import Animations from './animations/Animations.svelte';
 
-    let activeButton = 'basics';
+    let activeButton = 'animations';
 </script>
 
 <style>
@@ -40,12 +40,12 @@
             on:click={() => (activeButton = 'basics')}>Basics</button>
         <button
             class="button"
-            class:active={activeButton === 'transitions'}
-            on:click={() => (activeButton = 'transitions')}>Transitions</button>
+            class:active={activeButton === 'animations'}
+            on:click={() => (activeButton = 'animations')}>Animations</button>
     </div>
     {#if activeButton === 'basics'}
         <Basics />
     {:else}
-        <Transitions />
+        <Animations />
     {/if}
 </main>
