@@ -1,7 +1,8 @@
 <script>
     import Basics from './basics/Basics.svelte';
     import Animations from './animations/Animations.svelte';
-
+    import NotesApp from './NotesApp.svelte';
+    import Advanced from './advanced/Advanced.svelte';
     let activeButton = 'animations';
 </script>
 
@@ -40,12 +41,24 @@
             on:click={() => (activeButton = 'basics')}>Basics</button>
         <button
             class="button"
+            class:active={activeButton === 'advanced'}
+            on:click={() => (activeButton = 'advanced')}>Advanced</button>
+        <button
+            class="button"
             class:active={activeButton === 'animations'}
             on:click={() => (activeButton = 'animations')}>Animations</button>
+        <button
+            class="button"
+            class:active={activeButton === 'notes'}
+            on:click={() => (activeButton = 'notes')}>Example App</button>
     </div>
-    {#if activeButton === 'basics'}
-        <Basics />
-    {:else}
+    {#if activeButton === 'animations'}
         <Animations />
+    {:else if activeButton === 'notes'}
+        <NotesApp />
+    {:else if activeButton === 'advanced'}
+        <Advanced />
+    {:else}
+        <Basics />
     {/if}
 </main>
