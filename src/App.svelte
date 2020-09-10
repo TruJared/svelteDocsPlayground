@@ -3,7 +3,7 @@
     import Animations from './animations/Animations.svelte';
     import NotesApp from './NotesApp.svelte';
     import Advanced from './advanced/Advanced.svelte';
-    let activeButton = 'animations';
+    let activeButton = 'advanced';
 </script>
 
 <style>
