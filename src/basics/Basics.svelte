@@ -9,7 +9,6 @@
     import FormOutput from './FormOutput.svelte';
     import { time } from '../stores.js';
 
-    const htmlString = '&lt;div&gt';
 
     const warhammer = {
         faction: 'Lizardmen',
@@ -40,10 +39,6 @@
     }
 </script>
 <h2>Basics</h2>
-<p>
-    Random HTML string just because ➡
-    {@html htmlString}
-</p>
 <h3>Reactivity Statement</h3>
 <FormInput />
 <h3>Form Output</h3>

@@ -3,7 +3,15 @@
     import Animations from './animations/Animations.svelte';
     import NotesApp from './NotesApp.svelte';
     import Advanced from './advanced/Advanced.svelte';
-    let activeButton = 'advanced';
+
+    let activeButton = 'Advanced';
+
+    const buttons = [
+        { name: 'Basics', component: Basics },
+        { name: 'Advanced', component: Advanced },
+        { name: 'Animations', component: Animations },
+        { name: 'Notes App', component: NotesApp },
+    ];
 </script>
 
 <style>
@@ -26,16 +34,28 @@
         font-weight: 100;
     }
 
+    img {
+        width: 32px;
+    }
+
     .active {
         color: white;
         background: #ff3e00;
     }
 </style>
 
-  <main>
+<main>
     <h1>Welcome To: Dumb Svelte App!!!</h1>
+
+    <h2>
+        <a
+            href="https://github.com/TruJared/svelteDocsPlayground"
+            target="_blank"><img
+                src="./GitHub-Mark-64px.png"
+                alt="github logo" /> Repo</a>
+    </h2>
     <div class="pageSelector--loader">
-        <button
+        <!-- <button
             class="button"
             class:active={activeButton === 'basics'}
             on:click={() => (activeButton = 'basics')}>Basics</button>
@@ -50,15 +70,26 @@
         <button
             class="button"
             class:active={activeButton === 'notes'}
-            on:click={() => (activeButton = 'notes')}>Example App</button>
+            on:click={() => (activeButton = 'notes')}>Example App</button> -->
+
+        {#each buttons as button, index}
+            <button
+                class="button"
+                value="index"
+                class:active={activeButton === button.name}
+                on:click={() => (activeButton = button.name)}>{button.name}</button>
+        {/each}
     </div>
-    {#if activeButton === 'animations'}
+    <!-- {#if activeButton === 'Animations'}
         <Animations />
-    {:else if activeButton === 'notes'}
+    {:else if activeButton === 'Notes App'}
         <NotesApp />
-    {:else if activeButton === 'advanced'}
+    {:else if activeButton === 'Advanced'}
         <Advanced />
     {:else}
         <Basics />
-    {/if}
+    {/if} -->
+
+    <svelte:component
+        this={buttons.find((el) => el.name === activeButton).component} />
 </main>
